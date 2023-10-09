@@ -31,17 +31,17 @@
                                     <constraint firstAttribute="height" constant="80" id="YYH-Te-c3K"/>
                                 </constraints>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-Jq-dFo">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hr4-Jq-dFo" userLabel="Login Data View">
                                 <rect key="frame" x="16" y="283" width="361" height="88"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-aC-fHa">
+                                    <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-aC-fHa">
                                         <rect key="frame" x="0.0" y="43.666666666666686" width="361" height="1"/>
-                                        <color key="backgroundColor" systemColor="scrollViewTexturedBackgroundColor"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1" id="zWO-wP-MrX"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Número de teléfono o correo electrónico" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-xH-MQU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Número de teléfono o correo electrónico" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-xH-MQU">
                                         <rect key="frame" x="16" y="8.0000000000000018" width="329" height="27.666666666666671"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="textColor" red="0.55047190558050096" green="0.55047190558050096" blue="0.55047190558050096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -57,7 +57,11 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences" secureTextEntry="YES"/>
                                     </textView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Nfb-xH-MQU" secondAttribute="trailing" constant="16" id="27E-ri-VFF"/>
                                     <constraint firstAttribute="trailing" secondItem="tg9-R1-U4F" secondAttribute="trailing" constant="16" id="6AA-aV-WTO"/>
@@ -95,10 +99,13 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkC-Zf-Sd7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkC-Zf-Sd7" userLabel="New Account Button">
                                 <rect key="frame" x="16" y="755" width="361" height="41"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" cornerRadius="2">
+                                        <color key="backgroundColor" red="0.46228555856531051" green="0.52066532267091548" blue="0.86078912019729614" alpha="0.12897880503673428" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
                                         <fragment content="Crear cuenta">
                                             <attributes>
@@ -142,6 +149,12 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lNO-cU-0Oc">
+                                <rect key="frame" x="139" y="518" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -173,6 +186,19 @@
                             <constraint firstItem="Uw9-HF-pet" firstAttribute="leading" secondItem="ruy-x8-bwb" secondAttribute="leading" id="y4V-7b-FIK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bottomLineView" destination="aM7-l8-bOZ" id="Jol-fc-FY7"/>
+                        <outlet property="forgottenAccountButton" destination="Uw9-HF-pet" id="bvv-at-msY"/>
+                        <outlet property="headerImageView" destination="xyZ-iS-HcU" id="zgp-cv-pRe"/>
+                        <outlet property="initSessionButton" destination="ruy-x8-bwb" id="AfL-5y-cbr"/>
+                        <outlet property="loginDataLineView" destination="NCG-aC-fHa" id="26p-cX-yTr"/>
+                        <outlet property="loginDataView" destination="hr4-Jq-dFo" id="pfq-ia-eek"/>
+                        <outlet property="logoImageView" destination="9Jr-ak-DOX" id="oaT-0M-hoY"/>
+                        <outlet property="newAccountButton" destination="zkC-Zf-Sd7" id="Ph5-pT-ZA2"/>
+                        <outlet property="orLabel" destination="cfr-MS-jTe" id="FDh-bg-APk"/>
+                        <outlet property="passwordDataTextField" destination="tg9-R1-U4F" id="hmQ-yl-cCC"/>
+                        <outlet property="userDataTextField" destination="Nfb-xH-MQU" id="eXz-tv-m8T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -185,9 +211,6 @@
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="scrollViewTexturedBackgroundColor">
-            <color red="0.43529411764705883" green="0.44313725490196076" blue="0.47450980392156861" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
