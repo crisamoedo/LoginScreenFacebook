@@ -41,7 +41,7 @@
                                             <constraint firstAttribute="height" constant="1" id="zWO-wP-MrX"/>
                                         </constraints>
                                     </view>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Número de teléfono o correo electrónico" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-xH-MQU">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Número de teléfono o correo electrónico" translatesAutoresizingMaskIntoConstraints="NO" id="Nfb-xH-MQU">
                                         <rect key="frame" x="16" y="8.0000000000000018" width="329" height="27.666666666666671"/>
                                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="textColor" red="0.55047190558050096" green="0.55047190558050096" blue="0.55047190558050096" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
